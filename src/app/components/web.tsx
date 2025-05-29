@@ -12,7 +12,7 @@ export default function PWeb() {
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center gap-2">
             <GraduationCap className="h-6 w-6 text-teal-600" />
-            <span className="text-xl font-bold">EstudIA</span>
+            <span className="text-xl font-bold">StudIA</span>
           </div>
           <nav className="hidden md:flex gap-6">
             <Link href="#" className="text-sm font-medium hover:text-teal-600 transition-colors">
@@ -104,16 +104,18 @@ export default function PWeb() {
                   <div className="flex items-center gap-4 mt-4">
                     <div className="flex items-center text-sm text-muted-foreground">
                       <Clock className="mr-1 h-4 w-4" />
-                      {cursos[0].duracion}
+                      
                     </div>
                     <div className="flex items-center text-sm text-muted-foreground">
                       <Users className="mr-1 h-4 w-4" />
-                      {cursos[0].estudiantes}
+                      
                     </div>
                   </div>
                 </CardContent>
                 <CardFooter className="p-4 pt-0">
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700">Ver Detalles</Button>
+                  <Link href="/encuesta" className="w-full no-underline">
+                    <Button className="w-full bg-teal-600 hover:bg-teal-700">Ver Detalles</Button>
+                  </Link>
                 </CardFooter>
               </Card>
             </div>
@@ -324,8 +326,8 @@ const cursos = [
     descripcion:
       "Descrubre cual es el tipo de aprendizaje que mejor se adapta a ti y recibe recomendaciones personalizadas.",
     imagen: "/encuesta.png?height=180&width=320",
-    duracion: "16 semanas",
-    estudiantes: "1,245 estudiantes",
+    //duracion: "16 semanas",
+    //estudiantes: "1,245 estudiantes",
   },
   /*{
     titulo: "Diseño UX/UI Avanzado",
@@ -344,6 +346,7 @@ const cursos = [
     estudiantes: "1,532 estudiantes",
   },*/
 ]
+
 
 // Datos de ejemplo para los temarios
 const temarioProgramacion = [
